@@ -1,0 +1,24 @@
+.button {
+    display: block;
+    color: white;
+    @include Body4_Medi_UP_btn;
+    cursor: pointer;
+    padding: 10px 40px;
+    position: relative;
+    min-height: 60px;
+
+    &_outlined {
+        background: none;
+        border: 1px solid white;
+        transition: ease-in .2s;
+
+        &:hover {
+            border: 1px solid $color-accent1;
+            color: $color-accent1;
+        }
+    }
+
+    &_primary{
+        background-color: $color-primary1;
+    }
+}

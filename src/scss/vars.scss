@@ -1,0 +1,161 @@
+//Цвета
+$color-accent1: #5C4DD8;
+$color-accent2: #CA4DFF;
+$color-linear1: linear-gradient(180deg, rgba(87, 87, 86, 0.00) 0%, rgba(0, 0, 0, 0.80) 60.42%);
+$color-error: #FF4D58;
+$color-white: #FFFFFF;
+$color-black: #000000;
+$color-primary: #222222;
+$color-primary1: #333333;
+$color-secondary: #666666;
+$color-secondary1: #A8A6A6;
+$color-secondary2: #C4C4C4;
+$color-secondary3: #E6E6E6;
+$color-secondary4: #F5F5F5;
+
+
+//Основной текст текста
+
+@mixin Body1_Medi {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 140%;
+}
+
+@mixin Body1_Bold_Up {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 140%;
+    letter-spacing: 1.92px;
+    text-transform: uppercase;
+}
+
+@mixin Body2_Medi {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 140%;
+}
+
+
+@mixin Body2_Bold_Up {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 140%;
+    letter-spacing: 1.92px;
+    text-transform: uppercase;
+}
+
+
+@mixin Body3_Medi {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 140%;
+}
+
+@mixin Body4_Medi {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 140%;
+}
+
+@mixin Body4_Medi_UP_btn {
+    font-family: Gilroy;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 140%;
+    letter-spacing: 2.88px;
+    text-transform: uppercase;
+}
+
+@mixin Body5_Medi {
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 140%;
+}
+
+
+//Cвойства заголовков 
+
+@mixin Accent1 {
+    font-size: 88px;
+    font-weight: 500;
+    line-height: 88%;
+    text-transform: uppercase;
+}
+
+@mixin Accent2 {
+    font-size: 72px;
+    font-weight: 500;
+    line-height: 88%;
+    text-transform: uppercase;
+}
+
+@mixin Accent3 {
+    font-size: 44px;
+    font-weight: 500;
+    line-height: 88%;
+    text-transform: uppercase;
+}
+
+@mixin H1 {
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 120%;
+    text-transform: uppercase;
+}
+
+@mixin H2 {
+    font-size: 44px;
+    font-weight: 700;
+    line-height: 130%;
+    text-transform: uppercase;
+}
+
+@mixin H3 {
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 140%;
+    text-transform: uppercase;
+}
+
+@mixin H4 {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 140%;
+    text-transform: uppercase;
+}
+
+@mixin H5 {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 150%;
+    text-transform: uppercase;
+}
+
+@mixin H6 {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 170%;
+    text-transform: uppercase;
+}
+
+
+//Отступы
+$offset-bigest: 120px;
+$offset-big: 80px;
+$offset-middle: 40px;
+$offset-main: 30px;
+$offset-secondary: 20px;
+
+
+
+//Сетка
+
+$grid-gutter: 30px;
+$grid-col: 81px;
+$grid-item: calc($grid-col + $grid-gutter);
+
+
+//Контейнер
+
+$container: calc(($grid-gutter * 13) + ($grid-col * 12))

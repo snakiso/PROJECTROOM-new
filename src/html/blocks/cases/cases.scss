@@ -1,0 +1,10 @@
+.cases {
+    min-height: 100vh;
+    background-color: $color-secondary4;
+    padding: 120px 0;
+
+    &__title {
+        text-align: center;
+        margin-bottom: 80px;
+    }
+}

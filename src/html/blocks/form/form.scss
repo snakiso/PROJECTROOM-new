@@ -1,0 +1,194 @@
+.form {
+    &__input-block {
+        position: relative;
+    }
+
+    &__input {
+        height: 43px;
+        width: 100%;
+        border: none;
+        outline: none;
+        border-bottom: 1px solid $color-secondary2;
+        background: none;
+        color: $color-white;
+        padding: 10px 0 10px 8px;
+        @include Body2_Medi;
+        font-family: Gilroy;
+
+        &::placeholder {
+            font-family: Gilroy;
+            @include Body2_Medi;
+            color: $color-white;
+        }
+    }
+
+    &__accept-box {
+        display: flex;
+        align-items: start
+    }
+
+    &__accept-text {
+        @include Body3_Medi;
+        color: $color-secondary1;
+        margin-left: 10px;
+    }
+
+    &__input-label {
+        position: absolute;
+        left: 8px;
+        top: 10px;
+        z-index: 2;
+        pointer-events: none;
+        font-family: Gilroy;
+        @include Body2_Medi;
+        color: $color-white;
+        opacity: .7;
+        transform-origin: left;
+        transition: 1s cubic-bezier(.225, 1, .316, .99);
+        transform: translateY(-28px) scale(.8);
+    }
+
+    &__input:invalid+&__input-label {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+
+    &__input:focus+&__input-label {
+        opacity: .7;
+        transform: translateY(-28px) scale(.8);
+    }
+
+    .email-label.js-active {
+        opacity: .7 !important;
+        transform: translateY(-28px) scale(.8) !important;
+    }
+
+    @include desktop {
+
+        &__inputs-line {
+            grid-column: 3/8 span;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            column-gap: 10px;
+        }
+
+        &__textarea {
+            position: relative;
+            grid-row-start: 2;
+            grid-column: 3/8 span;
+        }
+
+        &__submit-block {
+            grid-row-start: 3;
+            grid-column: 3/8 span;
+            display: grid;
+            grid-template-columns: repeat(8, 1fr);
+            grid-template-rows: repeat(2, auto);
+            column-gap: 30px;
+        }
+
+        &__recaptcha {
+            grid-column: 4 span;
+            border: 1px solid $color-secondary1;
+            min-height: 100px;
+            grid-row-start: 1;
+            grid-row-end: 3;
+        }
+
+        &__accept-box {
+            grid-row-start: 1;
+            grid-column: 5/4 span;
+        }
+
+        &__submit {
+            grid-column: 5/4 span;
+            grid-row-start: 2;
+        }
+    }
+
+    @include tablet {
+        &__inputs-line {
+            grid-column: 3/8 span;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            column-gap: 10px;
+        }
+
+        &__textarea {
+            position: relative;
+            grid-row-start: 2;
+            grid-column: 3/8 span;
+        }
+
+        &__submit-block {
+            grid-row-start: 3;
+            grid-column: 3/8 span;
+            display: grid;
+            grid-template-columns: repeat(8, 1fr);
+            grid-template-rows: repeat(2, auto);
+            column-gap: 30px;
+        }
+
+        &__recaptcha {
+            grid-column: 4 span;
+            border: 1px solid $color-secondary1;
+            min-height: 100px;
+            grid-row-start: 1;
+            grid-row-end: 3;
+        }
+
+        &__accept-box {
+            grid-row-start: 1;
+            grid-column: 5/4 span;
+        }
+
+        &__submit {
+            grid-column: 5/4 span;
+            grid-row-start: 2;
+        }
+
+    }
+
+    @include mobile {
+
+        &__inputs-line {
+            grid-column: 12 span;
+            display: grid;
+            row-gap: 20px;
+        }
+
+        &__textarea {
+            position: relative;
+            grid-row-start: 2;
+            grid-column: 12 span;
+        }
+
+        &__submit-block {
+            grid-row-start: 3;
+            grid-column: 12 span;
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            grid-template-rows: repeat(3, auto);
+            row-gap: 20px;
+        }
+
+        &__recaptcha {
+            grid-column: 6 span;
+            border: 1px solid $color-secondary1;
+            min-height: 75px;
+            grid-row-start: 2;
+            grid-row-end: 2;
+        }
+
+        &__accept-box {
+            grid-row-start: 1;
+            grid-column: 6 span;
+        }
+
+        &__submit {
+            grid-column: 2/4 span;
+            grid-row-start: 3;
+        }
+
+    }
+}

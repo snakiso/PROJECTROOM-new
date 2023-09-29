@@ -1,0 +1,27 @@
+.p-own {
+    @include desktop {
+        @include Body2_Medi;
+    }
+
+    @include tablet {
+        @include Body2_Medi;
+    }
+
+    @include mobile {
+        @include Body3_Medi;
+    }
+}
+
+.p-big {
+    @include desktop {
+        @include Body1_Medi;
+    }
+
+    @include tablet {
+        @include Body1_Medi;
+    }
+
+    @include mobile {
+        @include Body3_Medi;
+    }
+}

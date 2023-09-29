@@ -1,0 +1,72 @@
+.accent-lg-title {
+    color: white;
+
+    @include desktop {
+        @include Accent1;
+    }
+
+    @include tablet {
+        @include Accent2;
+    }
+
+    @include mobile {
+        @include Accent3;
+    }
+}
+
+.lg-title {
+
+    color: white;
+
+    &_primary {
+        color: $color-primary1
+    }
+
+    @include desktop {
+        @include H1;
+    }
+
+    @include tablet {
+        @include H1;
+    }
+
+    @include mobile {
+        @include H3;
+    }
+}
+
+.md-title {
+    color: white;
+
+    @include desktop {
+        @include H2;
+    }
+
+    @include tablet {
+        @include H2;
+    }
+
+    @include mobile {
+        @include H5;
+    }
+}
+
+.sm-title {
+    color: white;
+
+    &_primary{
+        color: $color-primary1
+    }
+
+    @include desktop {
+        @include H4;
+    }
+
+    @include tablet {
+        @include H4;
+    }
+
+    @include mobile {
+        @include H5;
+    }
+}

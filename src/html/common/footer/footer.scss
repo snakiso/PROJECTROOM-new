@@ -1,0 +1,351 @@
+.footer {
+  background-color: $color-black;
+
+  &__list {
+    padding: 0;
+    list-style: none;
+    display: grid;
+    row-gap: 28px;
+  }
+
+  &__item-link {
+    color: $color-white;
+  }
+
+  &__item-link {
+    color: $color-white;
+    @include Body2_Bold_Up
+  }
+
+  &__contact-links {
+    display: grid;
+
+  }
+
+  &__contact-link {
+    position: relative;
+    color: $color-white;
+    @include Body1_Medi;
+
+    &_mail::before {
+      position: absolute;
+      content: '';
+      width: 17px;
+      height: 17px;
+      background-image: url(../img/footer/info.svg);
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    &_phone::before {
+      position: absolute;
+      content: '';
+      width: 17px;
+      height: 17px;
+      background-image: url(../img/footer/phone.svg);
+      background-repeat: no-repeat;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  &__address {
+    color: $color-secondary1;
+    @include Body3_Medi;
+  }
+
+  &__messangers-block {
+    display: grid;
+
+  }
+
+  &__messanger {
+    position: relative;
+    color: $color-white;
+    @include Body2_Bold_Up;
+
+    &_telegram::before {
+      position: absolute;
+      content: '';
+      width: 17px;
+      height: 17px;
+      background-image: url(../img/footer/Telegram.svg);
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    &_whatsapp::before {
+      position: absolute;
+      content: '';
+      width: 17px;
+      height: 17px;
+      background-image: url(../img/footer/WhatsApp.svg);
+      background-repeat: no-repeat;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  &__info-link {
+    position: relative;
+    color: $color-secondary1;
+    width: fit-content;
+    @include Body4_Medi;
+    letter-spacing: 1.44px;
+
+    &::after {
+      position: absolute;
+      content: '';
+      width: 5px;
+      height: 5px;
+      border-bottom: 1px solid $color-secondary1;
+      border-right: 1px solid $color-secondary1;
+      right: 7px;
+      top: 5px;
+      transform: rotate(-45deg);
+    }
+  }
+
+  &__develop {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    @include Body4_Medi;
+    color: $color-secondary1;
+  }
+
+  @include desktop {
+    &__wrapper {
+      padding: 70px 30px;
+    }
+
+    &__logo-box {
+      grid-column: 2 span;
+    }
+
+    &__list {
+      grid-column: 4/2 span;
+      row-gap: 28px;
+    }
+
+    &__item-link {
+      transition: .7s cubic-bezier(.17, .85, .438, .99);
+
+      &:hover {
+        color: $color-accent1;
+      }
+    }
+
+    &__contact-block {
+      grid-column: 7/6 span;
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+
+      &::after {
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 1px;
+        background-color: $color-secondary1;
+        bottom: 40px;
+      }
+    }
+
+    &__contact-links {
+      row-gap: 10px;
+    }
+
+    &__contact-link {
+      padding-left: 30px;
+      transition: .7s cubic-bezier(.17, .85, .438, .99);
+
+      &:hover {
+        color: $color-accent1;
+      }
+    }
+
+    &__address {
+      margin-top: 38px;
+    }
+
+    &__messangers-block {
+      row-gap: 12px;
+    }
+
+    &__messanger {
+      padding-left: 30px;
+      transition: .7s cubic-bezier(.17, .85, .438, .99);
+
+      &:hover {
+        color: $color-accent1;
+      }
+    }
+
+    &__info-links {
+      display: grid;
+      row-gap: 6px;
+      margin-top: 42px;
+    }
+
+    &__info-link {
+      padding-right: 17px;
+    }
+
+    &__develop {
+      left: 0;
+      bottom: 0;
+    }
+  }
+
+  @include tablet {
+    &__wrapper {
+      padding: 70px 15px;
+    }
+
+    &__logo-box {
+      grid-column: 2 span;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    &__list {
+      grid-column: 4/2 span;
+    }
+
+    &__contact-block {
+      grid-column: 7/6 span;
+      display: grid;
+      row-gap: 30px;
+      position: relative;
+      padding-bottom: 60px;
+
+      &::after {
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 1px;
+        background-color: $color-secondary1;
+        bottom: 40px;
+      }
+    }
+
+    &__contact-links {
+      row-gap: 10px;
+    }
+
+    &__contact-link {
+      padding-left: 30px;
+    }
+
+    &__address {
+      margin-top: 38px;
+    }
+
+    &__messangers-block {
+      row-gap: 12px;
+    }
+
+    &__messanger {
+      padding-left: 30px;
+    }
+
+    &__info-links {
+      display: grid;
+      row-gap: 6px;
+      margin-top: 42px;
+    }
+
+    &__info-link {
+      padding-right: 17px;
+    }
+
+    &__develop {
+      left: 0;
+      bottom: 0;
+    }
+  }
+
+  @include mobile {
+    position: relative;
+
+    &__wrapper {
+      padding: 60px 15px 25px 15px;
+      grid-template-rows: repeat(2, auto);
+    }
+
+    &__logo-box {
+      position: absolute;
+      bottom: 0;
+
+      img {
+        max-width: 91px;
+      }
+    }
+
+    &__list {
+      grid-column: 12 span;
+      margin-bottom: 40px;
+    }
+
+    &__contact-block {
+      grid-column: 12 span;
+      display: grid;
+      row-gap: 24px;
+      position: relative;
+      padding-bottom: 65px;
+
+      &::after {
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 1px;
+        background-color: $color-secondary1;
+        bottom: 40px;
+      }
+    }
+
+    &__contact-links {
+      row-gap: 24px;
+    }
+
+    &__contact-link {
+      padding-left: 30px;
+    }
+
+    &__address {
+      margin-top: 24px;
+    }
+
+    &__messangers-block {
+      row-gap: 24px;
+    }
+
+    &__messanger {
+      padding-left: 30px;
+    }
+
+    &__info-links {
+      display: grid;
+      row-gap: 24px;
+      margin-top: 24px;
+    }
+
+    &__info-link {
+      padding-right: 17px;
+    }
+
+    &__develop {
+      left: auto;
+      width: fit-content;
+      right: 0;
+      bottom: -9;
+    }
+  }
+}

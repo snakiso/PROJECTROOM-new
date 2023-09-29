@@ -1,0 +1,42 @@
+@import '../scss/breakpoints';
+@import '../scss/vars';
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+input[type='checkbox'] {
+  accent-color: $color-accent1;
+  width: 20px;
+  height: 20px;
+}
+
+a {
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Gilroy;
+}
+
+
+@import 'fonts.scss';
+@import '../scss/layout';
+@import '../scss/wrapper';
+@import '../scss/animation';
+@import '../html/common/footer/footer';
+@import '../html/blocks/titles/titles';
+@import '../html/blocks/text-styles/text-styles';
+@import '../html/blocks/button/button';
+@import '../html/blocks/form/form';
+@import '../html/blocks/textarea/textarea';
+@import '../html/blocks/contact-us/contacts-us';
+@import '../html/blocks/clients/clients';
+@import '../html/blocks/grid-chess/grid-chess';
+@import '../html/blocks/cases/cases';

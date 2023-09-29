@@ -1,0 +1,106 @@
+.btn-hover {
+  position: relative;
+  overflow: hidden;
+  transition: all .2s;
+}
+
+.btn-hover::before {
+  position: absolute;
+  content: '';
+  width: 9px;
+  height: 9px;
+  border-bottom: 2px solid white;
+  border-right: 2px solid white;
+  transform: rotate(-45deg);
+  right: 30px;
+  opacity: 0;
+  transition: all .4s;
+}
+
+.btn-hover:hover {
+  width: 220px;
+}
+
+.btn-hover:hover:before {
+  right: 25px;
+  opacity: 1;
+}
+
+
+.card-up {
+  transform: translateY(100px);
+  opacity: 0;
+  transition: all .2s;
+}
+
+.card-up-2 {
+  transform: translateY(100px);
+  opacity: 0;
+  transition: all .2s;
+  transition-delay: .2s;
+}
+
+.card-up-4 {
+  transform: translateY(100px);
+  opacity: 0;
+  transition: all .2s;
+  transition-delay: .4s;
+}
+
+.card-up.animated {
+  transform: none;
+  opacity: 1;
+}
+
+.card-up-2.animated {
+  transform: none;
+  opacity: 1;
+}
+
+.card-up-4.animated {
+  transform: none;
+  opacity: 1;
+}
+
+.fade-left {
+  transform: translateX(-100%);
+  opacity: 0;
+  transition: all .2s;
+}
+
+.fade-right {
+  transform: translateX(100%);
+  opacity: 0;
+  transition: all .2s;
+}
+
+.fade-down {
+  transform: translateY(200px);
+  opacity: 0;
+  transition: all .2s;
+}
+
+.fade-left.animated {
+  transform: translateX(0%);
+  opacity: 1;
+}
+
+.fade-right.animated {
+  transform: translateX(0%);
+  opacity: 1;
+}
+
+.fade-down.animated {
+  transform: translateY(0%);
+  opacity: 1;
+}
+
+
+@media screen and (max-width: 1300px) {
+
+  .card-up,
+  .card-up-2,
+  .card-up-4 {
+    transition-delay: 0s;
+  }
+}
