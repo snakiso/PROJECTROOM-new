@@ -1,4 +1,5 @@
 .p-own {
+
     @include desktop {
         @include Body2_Medi;
     }
@@ -25,3 +26,4 @@
         @include Body3_Medi;
     }
 }
+

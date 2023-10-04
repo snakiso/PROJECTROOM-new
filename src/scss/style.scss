@@ -23,6 +23,11 @@ html {
 body {
   margin: 0;
   font-family: Gilroy;
+  overflow-x: hidden;
+}
+
+.page{
+  overflow-x: hidden;
 }
 
 
@@ -30,13 +35,23 @@ body {
 @import '../scss/layout';
 @import '../scss/wrapper';
 @import '../scss/animation';
+@import '../scss/sliders';
 @import '../html/common/footer/footer';
 @import '../html/blocks/titles/titles';
 @import '../html/blocks/text-styles/text-styles';
 @import '../html/blocks/button/button';
 @import '../html/blocks/form/form';
+@import '../html/blocks/ul/ul';
 @import '../html/blocks/textarea/textarea';
 @import '../html/blocks/contact-us/contacts-us';
 @import '../html/blocks/clients/clients';
 @import '../html/blocks/grid-chess/grid-chess';
 @import '../html/blocks/cases/cases';
+@import '../html/blocks/advantages/advantages';
+@import '../html/blocks/team/team';
+@import '../html/blocks/we-do/we-do';
+@import '../html/blocks/task/task';
+@import '../html/blocks/more/more';
+@import '../html/blocks/skills/skills';
+@import '../html/blocks/reviews/reviews';
+@import '../html/blocks/technologies/technologies';

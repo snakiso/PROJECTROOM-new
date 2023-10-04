@@ -1,0 +1,248 @@
+.skills {
+    min-height: 100vh;
+    background-color: $color-secondary4;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+
+    @include desktop {
+        &__container {
+            width: 100%;
+            height: 100%;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+
+        &__wrapper {
+            position: static;
+            display: flex;
+            flex-flow: wrap;
+        }
+
+        &__img-box {
+            position: static;
+            flex-basis: 50%;
+        }
+
+        &__img {
+            position: absolute;
+            width: 50%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            z-index: 0;
+            background-image: url(../img/skills/bg.jpg);
+        }
+
+        &__content {
+            flex-basis: 50%;
+        }
+
+        &__content-inner {
+            margin-left: 120px;
+        }
+
+        &__list {
+            margin-top: 80px;
+        }
+
+        &__item {
+            position: relative;
+
+            &:not(:last-child) {
+                margin-bottom: 25px;
+            }
+        }
+
+        &__item-title,
+        &__item-lvl {
+            @include Body1_Bold_Up;
+            letter-spacing: normal;
+            color: $color-accent1;
+        }
+
+        &__item-lvl {
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+
+        &__item-line {
+            position: relative;
+            height: 2px;
+            margin-top: 6px;
+            background: $color-secondary2;
+        }
+
+        &__item-line-fill {
+            background-color: $color-accent1;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            height: 2px;
+        }
+    }
+
+    @include tablet {
+        &__container {
+            width: 100%;
+            height: 100%;
+            min-height: 100vh;
+            display: flex;
+        }
+
+        &__wrapper {
+            padding: 0;
+            position: static;
+            display: flex;
+            flex-direction: column;
+        }
+
+        &__img-box {
+            position: static;
+        }
+
+        &__img {
+            display: block;
+            position: relative;
+            width: 100%;
+            aspect-ratio: 2/1;
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            z-index: 0;
+            background-image: url(../img/skills/bg.jpg);
+        }
+
+        &__content {
+            padding: 0 30px;
+            margin-top: 40px;
+            padding-bottom: 80px;
+        }
+
+        &__list {
+            margin-top: 80px;
+        }
+
+        &__item {
+            position: relative;
+
+            &:not(:last-child) {
+                margin-bottom: 25px;
+            }
+        }
+
+        &__item-title,
+        &__item-lvl {
+            @include Body1_Bold_Up;
+            letter-spacing: normal;
+            color: $color-accent1;
+        }
+
+        &__item-lvl {
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+
+        &__item-line {
+            position: relative;
+            height: 2px;
+            margin-top: 6px;
+            background: $color-secondary2;
+        }
+
+        &__item-line-fill {
+            background-color: $color-accent1;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            height: 2px;
+        }
+    }
+
+    @include mobile {
+        &__container {
+            width: 100%;
+            height: 100%;
+            min-height: 100vh;
+            display: flex;
+        }
+
+        &__wrapper {
+            padding: 0;
+            position: static;
+            display: flex;
+            flex-direction: column;
+        }
+
+        &__title {
+            text-align: center;
+        }
+
+        &__img-box {
+            position: static;
+        }
+
+        &__img {
+            display: block;
+            position: relative;
+            width: 100%;
+            aspect-ratio: 3/2;
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            z-index: 0;
+            background-image: url(../img/skills/bg.jpg);
+        }
+
+        &__content {
+            padding: 0 30px;
+            margin-top: 40px;
+            padding-bottom: 80px;
+        }
+
+        &__list {
+            margin-top: 22px;
+        }
+
+        &__item {
+            position: relative;
+
+            &:not(:last-child) {
+                margin-bottom: 25px;
+            }
+        }
+
+        &__item-title,
+        &__item-lvl {
+            @include Body3_Bold_Up;
+            color: $color-accent1;
+        }
+
+        &__item-lvl {
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+
+        &__item-line {
+            position: relative;
+            height: 2px;
+            margin-top: 6px;
+            background: $color-secondary2;
+        }
+
+        &__item-line-fill {
+            background-color: $color-accent1;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            height: 2px;
+        }
+    }
+}

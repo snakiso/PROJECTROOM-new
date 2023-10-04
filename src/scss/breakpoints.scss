@@ -9,7 +9,7 @@ $screen-md: 1000px;
 // Tablets and small desktops
 $screen-lg-min: 1440px;
 
-
+$screen-laptop: 1360px;
 
 
 
@@ -28,9 +28,21 @@ $screen-lg-min: 1440px;
   }
 }
 
+@mixin alt-tablet {
+  @media (min-width: #{$screen-sm}) and (max-width: #{$screen-laptop}) {
+    @content;
+  }
+}
+
 // Large devices
 @mixin desktop {
   @media (min-width: #{$screen-md}) {
+    @content;
+  }
+}
+
+@mixin alt-desktop {
+  @media (min-width: #{$screen-laptop}) {
     @content;
   }
 }

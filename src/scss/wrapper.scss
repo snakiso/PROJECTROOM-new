@@ -4,6 +4,7 @@
   padding-right: $grid-gutter;
   margin-left: auto;
   margin-right: auto;
+  width: 100%;
 
   @include tablet {
     max-width: 1230px;

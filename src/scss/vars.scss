@@ -36,6 +36,13 @@ $color-secondary4: #F5F5F5;
     line-height: 140%;
 }
 
+@mixin Body2_Medi_Up {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 140%;
+    letter-spacing: 1.92px;
+    text-transform: uppercase;
+}
 
 @mixin Body2_Bold_Up {
     font-size: 16px;
@@ -50,6 +57,22 @@ $color-secondary4: #F5F5F5;
     font-size: 14px;
     font-weight: 500;
     line-height: 140%;
+}
+
+@mixin Body3_Medi_Up {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 140%;
+    letter-spacing: 1.68px;
+    text-transform: uppercase;
+}
+
+@mixin Body3_Bold_Up {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 140%;
+    letter-spacing: 1.68px;
+    text-transform: uppercase;
 }
 
 @mixin Body4_Medi {

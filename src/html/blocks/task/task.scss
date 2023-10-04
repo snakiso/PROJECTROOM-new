@@ -1,0 +1,114 @@
+.task {
+    min-height: 100vh;
+    background-color: $color-primary;
+    display: flex;
+    align-items: center;
+
+
+    @include desktop {
+        &__wrapper {
+            align-items: center;
+        }
+
+        &__description {
+            grid-column: 5 span;
+        }
+
+        &__description-text {
+            color: $color-white;
+            margin-top: 40px;
+        }
+
+        &__list {
+            grid-column: 7/7 span;
+        }
+
+        &__item {
+            padding-left: 40px;
+            @include Body1_Bold_Up;
+            letter-spacing: normal;
+            color: $color-white;
+
+            &:not(:last-child) {
+                margin-bottom: 40px;
+            }
+
+            &::before {
+                width: 15px;
+                height: 15px;
+            }
+        }
+    }
+
+    @include tablet {
+        &__wrapper {
+            align-items: center;
+        }
+
+        &__description {
+            grid-column: 12 span;
+        }
+
+        &__description-text {
+            color: $color-white;
+            margin-top: 40px;
+        }
+
+        &__list {
+            grid-column: 12 span;
+            margin-top: 40px;
+        }
+
+        &__item {
+            padding-left: 40px;
+            @include Body1_Bold_Up;
+            letter-spacing: normal;
+            color: $color-white;
+
+            &:not(:last-child) {
+                margin-bottom: 20px;
+            }
+
+            &::before {
+                width: 15px;
+                height: 15px;
+            }
+        }
+    }
+
+    @include mobile {
+        &__wrapper {
+            align-items: center;
+        }
+
+        &__description {
+            grid-column: 12 span;
+        }
+
+        &__description-text {
+            color: $color-white;
+            margin-top: 30px;
+        }
+
+        &__list {
+            grid-column: 12 span;
+            margin-top: 30px;
+        }
+
+        &__item {
+            padding-left: 18px;
+            @include Body3_Bold_Up;
+            color: $color-white;
+            letter-spacing: 1.68px;
+
+            &:not(:last-child) {
+                margin-bottom: 12px;
+            }
+
+            &::before {
+                width: 10px;
+                height: 10px;
+            }
+        }
+    }
+}

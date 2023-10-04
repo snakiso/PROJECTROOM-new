@@ -1,0 +1,117 @@
+.advantages {
+    min-height: 100vh;
+    background-color: $color-primary;
+    display: flex;
+    align-items: center;
+
+    &__title {
+        grid-column: 12 span;
+        text-align: center;
+        margin-bottom: 4px;
+    }
+
+    &__subtitle {
+        grid-column: 12 span;
+        text-align: center;
+    }
+
+    &__box {
+        display: flex;
+    }
+
+    &__item-title {
+        display: block;
+        width: fit-content;
+        padding: 4px 14px;
+        background-color: $color-accent1;
+        color: $color-white;
+        margin-bottom: 8px;
+    }
+
+    &__item-text {
+        color: $color-secondary1;
+    }
+
+    @include desktop {
+        &__list {
+            grid-column: 3/9 span;
+            margin-top: 90px;
+        }
+
+        &__box {
+            justify-content: space-between;
+            max-width: 900px;
+
+            &:not(:last-child) {
+                margin-bottom: 45px;
+            }
+        }
+
+        &__item {
+            max-width: 344px;
+        }
+
+        &__item-title {
+            @include Body2_Bold_Up;
+        }
+    }
+
+    @include tablet {
+        &__list {
+            grid-column: 3/9 span;
+            margin-top: 90px;
+        }
+
+        &__box {
+            flex-direction: column;
+            align-items: center;
+            max-width: 900px;
+
+            &:not(:last-child) {
+                margin-bottom: 25px;
+            }
+        }
+
+        &__item {
+            max-width: 344px;
+
+            &:not(:last-child) {
+                margin-bottom: 25px;
+            }
+        }
+
+        &__item-title {
+            @include Body2_Bold_Up;
+        }
+    }
+
+    @include mobile {
+        &__list {
+            grid-column: 12 span;
+            margin-top: 90px;
+        }
+
+        &__box {
+            flex-direction: column;
+
+            &:not(:last-child) {
+                margin-bottom: 25px;
+            }
+        }
+
+        &__item {
+            &:not(:last-child) {
+                margin-bottom: 25px;
+            }
+        }
+
+        &__item-title {
+            @include Body3_Bold_Up;
+        }
+
+        &__subtitle{
+            @include Body1_Bold_Up;
+            letter-spacing: normal;
+        }
+    }
+}
