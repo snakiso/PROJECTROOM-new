@@ -1,0 +1,111 @@
+.we-can {
+    min-height: 100vh;
+    background-color: $color-secondary4;
+    display: flex;
+    align-items: center;
+
+    &__title {
+        text-align: center;
+    }
+
+    @include desktop {
+        &__slider {
+            margin-top: 80px;
+        }
+
+        &__item {
+            position: relative;
+            max-width: 940px;
+        }
+
+        &__item-img {
+            display: block;
+        }
+
+        &__item-content {
+            position: absolute;
+            z-index: 2;
+            bottom: 40px;
+            left: 50px;
+            max-width: 690px;
+        }
+
+        &__item-title {
+            @include H5;
+            color: $color-accent2;
+        }
+
+        &__item-text {
+            @include H3;
+            color: $color-white;
+        }
+    }
+
+    @include tablet {
+        &__slider {
+            margin-top: 60px;
+        }
+
+        &__item {
+            position: relative;
+            max-width: 100%;
+        }
+
+        &__item-img {
+            display: block;
+            width: inherit;
+        }
+
+        &__item-content {
+            position: absolute;
+            z-index: 2;
+            bottom: 40px;
+            left: 50px;
+            max-width: 690px;
+        }
+
+        &__item-title {
+            @include H5;
+            color: $color-accent2;
+        }
+
+        &__item-text {
+            @include H3;
+            color: $color-white;
+        }
+    }
+
+    @include mobile {
+        &__slider {
+            margin-top: 40px;
+        }
+
+        &__item {
+            position: relative;
+            max-width: 100%;
+        }
+
+        &__item-img {
+            display: block;
+            width: inherit;
+        }
+
+        &__item-content {
+            position: absolute;
+            z-index: 2;
+            bottom: 20px;
+            left: 20px;
+            max-width: 690px;
+        }
+
+        &__item-title {
+            @include Body4_Bold_Up;
+            color: $color-accent2;
+        }
+
+        &__item-text {
+            @include Body3_Bold_Up;
+            color: $color-white;
+        }
+    }
+}

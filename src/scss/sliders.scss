@@ -45,12 +45,20 @@
         border-radius: 50%;
     }
 
+    &_white {
+        .swiper-pagination-bullet {
+            background-color: $color-white;
+        }
+    }
+
     .swiper-pagination-bullet-active {
         width: 12px;
         height: 12px;
         margin: 0 24px;
         background-color: $color-accent1;
     }
+
+
 }
 
 .swiper-nav {

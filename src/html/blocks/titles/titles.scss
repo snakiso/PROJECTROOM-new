@@ -38,6 +38,10 @@
 .md-title {
     color: white;
 
+    &_primary {
+        color: $color-primary1
+    }
+
     @include desktop {
         @include H2;
     }
@@ -54,7 +58,7 @@
 .sm-title {
     color: white;
 
-    &_primary{
+    &_primary {
         color: $color-primary1
     }
 

@@ -1,63 +1,189 @@
 .we-do {
     min-height: 100vh;
     background-color: $color-primary;
-    padding: 120px 0;
+
 
     &__title {
         text-align: center;
     }
 
-    &__container {
-        margin-top: 80px;
-    }
+    @include desktop {
+        padding: 120px 0;
 
-    &__box {
-        &:not(:last-child) {
-            margin-bottom: 80px;
+        &__container {
+            margin-top: 80px;
+        }
+
+        &__box {
+            &:not(:last-child) {
+                margin-bottom: 80px;
+            }
+        }
+
+        &__box-img {
+            max-width: 1510px;
+            width: 100%;
+            display: block;
+            margin: auto;
+            margin-bottom: 40px;
+        }
+
+        &__box-description {
+            grid-column: 5 span;
+        }
+
+        &__box-subtitle {
+            @include H5;
+            color: $color-accent1;
+        }
+
+        &__box-title {
+            @include H3;
+            color: $color-white;
+            margin-top: 8px;
+            margin-bottom: 30px;
+        }
+
+        &__item {
+            @include Body1_Medi;
+            padding-left: 18px;
+            color: $color-white;
+
+            &:not(:last-child) {
+                margin-bottom: 8px;
+            }
+
+            &::before {
+                width: 8px;
+                height: 8px;
+            }
+        }
+
+        &__box-text {
+            grid-column: 7/6 span;
+            color: $color-white;
         }
     }
 
-    &__box-img {
-        max-width: 1510px;
-        width: 100%;
-        display: block;
-        margin: auto;
-        margin-bottom: 40px;
-    }
+    @include tablet {
+        padding: 100px 0;
 
-    &__box-description {
-        grid-column: 5 span;
-    }
-
-    &__box-subtitle {
-        @include H5;
-        color: $color-accent1;
-    }
-
-    &__box-title {
-        @include H3;
-        color: $color-white;
-        margin-top: 8px;
-        margin-bottom: 30px;
-    }
-
-    &__item {
-        @include Body1_Medi;
-        padding-left: 18px;
-        color: $color-white;
-
-        &:not(:last-child) {
-            margin-bottom: 8px;
+        &__container {
+            margin-top: 80px;
         }
 
-        &::before {
-            width: 8px;
-            height: 8px;
+        &__box {
+            &:not(:last-child) {
+                margin-bottom: 80px;
+            }
+        }
+
+        &__box-img {
+            max-width: 1510px;
+            width: 100%;
+            display: block;
+            margin: auto;
+            margin-bottom: 40px;
+        }
+
+        &__box-description {
+            grid-column: 5 span;
+        }
+
+        &__box-subtitle {
+            @include H5;
+            color: $color-accent1;
+        }
+
+        &__box-title {
+            @include H3;
+            color: $color-white;
+            margin-top: 8px;
+            margin-bottom: 30px;
+        }
+
+        &__item {
+            @include Body1_Medi;
+            padding-left: 18px;
+            color: $color-white;
+
+            &:not(:last-child) {
+                margin-bottom: 8px;
+            }
+
+            &::before {
+                width: 8px;
+                height: 8px;
+            }
+        }
+
+        &__box-text {
+            grid-column: 7/6 span;
+            color: $color-white;
         }
     }
 
-    &__box-text {
-        grid-column: 7/6 span;
-        color: $color-white;
+    @include mobile {
+        padding: 80px 0;
+
+        &__container {
+            margin-top: 80px;
+        }
+
+        &__box {
+            flex-shrink: 0;
+            &:not(:last-child) {
+                margin-bottom: 80px;
+            }
+        }
+
+        &__swiper-wrapper{
+            display: flex;
+        }
+
+        &__box-img {
+            max-width: 1510px;
+            width: 100%;
+            display: block;
+            margin: auto;
+            margin-bottom: 40px;
+        }
+
+        &__box-description {
+            grid-column: 12 span;
+            margin-bottom: 20px
+        }
+
+        &__box-subtitle {
+            @include Body1_Bold_Up;
+            color: $color-accent1;
+        }
+
+        &__box-title {
+            @include H5;
+            color: $color-white;
+            margin-top: 8px;
+            margin-bottom: 30px;
+        }
+
+        &__item {
+            @include Body3_Medi;
+            padding-left: 18px;
+            color: $color-white;
+
+            &:not(:last-child) {
+                margin-bottom: 8px;
+            }
+
+            &::before {
+                width: 8px;
+                height: 8px;
+            }
+        }
+
+        &__box-text {
+            grid-column: 12 span;
+            color: $color-white;
+        }
     }
 }

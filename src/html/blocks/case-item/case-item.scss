@@ -1,0 +1,81 @@
+.case-item {
+    padding: 60px 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    &_bg-gray{
+        background-color: $color-secondary4;
+    }
+
+    &_bg-right {
+        background-image: url(../img/case-page/bg-1.png);
+        background-repeat: no-repeat;
+        background-size: auto;
+        background-position-x: 95%;
+        background-position-y: center;
+    }
+
+    &_bg-left {
+        background-image: url(../img/case-page/bg-1.png);
+        background-repeat: no-repeat;
+        background-position-x: 10%;
+        background-position-y: center;
+    }
+
+    &__description {
+        width: 100%;
+        margin-bottom: 60px;
+
+        &_column {
+            .case-item__title {
+                grid-column: 12 span;
+                margin-bottom: 30px;
+            }
+
+            .case-item__text {
+                grid-column: 8 span;
+            }
+        }
+    }
+
+    &__title {
+        grid-column: 4 span;
+    }
+
+    &__text {
+        @include Body1_Medi;
+        grid-column: 5/8 span;
+
+        &:not(:last-child) {
+            margin-bottom: 15px;
+        }
+    }
+
+    &__img-box {
+        position: relative;
+        width: 100%;
+        min-height: 700px;
+
+        &_gray-bg {
+            padding: 80px 0;
+            background-color: $color-secondary4;
+        }
+    }
+
+    &__img-box-inner {
+        display: flex;
+        align-items: start;
+        justify-content: space-between;
+    }
+
+    &__img {
+
+        &_absolute {
+            position: absolute;
+            right: 0;
+        }
+    }
+}

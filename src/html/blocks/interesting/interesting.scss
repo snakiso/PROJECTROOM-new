@@ -1,0 +1,67 @@
+.interesting {
+    background-color: $color-primary;
+
+    &__item {
+        position: relative;
+    }
+
+    @include desktop {
+        padding: 120px 0;
+
+        &__title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        &__item-title {
+            position: absolute;
+            left: 30px;
+            bottom: 30px;
+            @include Body2_Bold_Up;
+            color: $color-white;
+        }
+    }
+
+    @include tablet {
+        padding: 100px 0;
+
+        &__title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        &__item-title {
+            position: absolute;
+            left: 30px;
+            bottom: 30px;
+            @include Body2_Bold_Up;
+            color: $color-white;
+        }
+    }
+
+    @include mobile {
+        padding: 80px 0;
+
+        &__title {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        &__item{
+            width: 100%;
+
+            img{
+                display: block;
+                width: 100%;
+            }
+        }
+
+        &__item-title {
+            position: absolute;
+            left: 30px;
+            bottom: 30px;
+            @include Body2_Bold_Up;
+            color: $color-white;
+        }
+    }
+}
