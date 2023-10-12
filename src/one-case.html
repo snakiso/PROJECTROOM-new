@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ru" class="html">
+@@include('html/common/head/head.html',{
+"title": "Index"
+})
+
+<body class="body">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10.3.1/swiper-bundle.min.js"></script>
+    <div class="page">
+        <main class="main">
+            @@include('html/blocks/case-item/case-item.html',{})
+            @@include('html/blocks/interesting/interesting.html',{})
+            @@include('html/blocks/more/more.html',{})
+            @@include('html/blocks/contact-us/contact-us.html',{})
+        </main>
+        @@include('html/common/footer/footer.html',{})
+    </div>
+</body>
+<script src="./js/swipers.js"></script>
+<script src="./js/cases-bg.js"></script>
+
+</html>

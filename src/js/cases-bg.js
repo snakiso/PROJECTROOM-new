@@ -1,5 +1,5 @@
 const gridChessBg = document.querySelectorAll('.grid-chess__item-img');
-const url = '../../img/cases/case-';
+const url = '../img/cases/case-';
 
 
 

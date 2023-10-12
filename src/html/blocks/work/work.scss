@@ -1,0 +1,113 @@
+.work {
+    padding: 120px 0;
+    background-color: black;
+    color: $color-white;
+
+    &__title {
+        text-align: center;
+    }
+
+    &__subtitle {
+        display: block;
+        margin-top: 12px;
+        @include Body2_Medi;
+        text-align: center;
+    }
+
+    &__slogan {
+        text-align: center;
+        margin: 80px 0;
+        @include H6;
+    }
+
+    &__slogan-accent {
+        display: inline-block;
+        padding: 0 5px;
+        background-color: $color-accent1;
+    }
+
+    &__inner {
+        display: flex;
+    }
+
+    &__work,
+    &__details {
+        flex-basis: 50%;
+        position: relative;
+    }
+
+    &__circle {
+        position: absolute;
+        top: 0;
+        transform: rotate(-90deg);
+    }
+
+    &__circle-progress {
+        stroke-dashoffset: 523;
+        stroke-dasharray: 628;
+        stroke: $color-accent1;
+    }
+
+    &__work-list {
+        padding-left: 60px;
+    }
+
+    &__work-item {
+        min-height: 200px;
+        display: flex;
+
+        &.active {
+            .work__work-item-inner {
+                opacity: 1;
+
+                span {
+                    @include Accent2;
+                    color: $color-accent1;
+                    margin-right: 22px;
+                }
+
+                p {
+                    @include H4;
+                }
+            }
+        }
+    }
+
+    &__work-item-inner {
+        display: flex;
+        align-items: center;
+        opacity: 0.1;
+        transition: ease-in .2s;
+
+        span {
+            @include Accent2;
+            margin-right: 22px;
+        }
+
+        p {
+            @include H4;
+        }
+    }
+
+    &__details-list {
+        max-width: 520px;
+        margin: 0 0 0 auto;
+    }
+
+    &__details-item {
+        display: flex;
+        min-height: 200px;
+        @include Body1_Medi;
+        opacity: 0.1;
+        transition: ease-in .2s;
+        align-items: center;
+
+        &:not(:last-child) {
+            border-bottom: 1px solid $color-secondary2;
+        }
+
+        &.active {
+            opacity: 1;
+        }
+    }
+}

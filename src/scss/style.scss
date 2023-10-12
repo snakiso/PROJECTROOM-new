@@ -12,6 +12,11 @@ input[type='checkbox'] {
   height: 20px;
 }
 
+ul {
+  list-style: none;
+  padding: 0;
+}
+
 a {
   text-decoration: none;
 }
@@ -26,7 +31,7 @@ body {
   overflow-x: hidden;
 }
 
-.page{
+.page {
   overflow-x: hidden;
 }
 
@@ -58,3 +63,8 @@ body {
 @import '../html/blocks/we-can/we-can';
 @import '../html/blocks/case-item/case-item';
 @import '../html/blocks/interesting/interesting';
+@import '../html/blocks/home-slider/home-slider';
+@import '../html/blocks/texts-bg/texts-bg';
+@import '../html/blocks/scroll-btn/scroll-btn';
+@import '../html/blocks/exp/exp';
+@import '../html/blocks/work/work';

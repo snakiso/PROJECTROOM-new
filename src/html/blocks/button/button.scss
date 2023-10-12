@@ -18,7 +18,16 @@
         }
     }
 
-    &_primary{
+    &_primary {
         background-color: $color-primary1;
+    }
+
+    &_accent {
+        background-color: $color-accent1;
+    }
+
+    &_white{
+        background-color: $color-white;
+        color: $color-black;
     }
 }

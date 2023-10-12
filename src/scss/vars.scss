@@ -89,6 +89,15 @@ $color-secondary4: #F5F5F5;
     text-transform: uppercase;
 }
 
+@mixin Body4_Medi_Up {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 140%;
+    letter-spacing: 1.44px;
+    text-transform: uppercase
+}
+
+
 @mixin Body4_Medi_UP_btn {
     font-family: Gilroy;
     font-size: 12px;

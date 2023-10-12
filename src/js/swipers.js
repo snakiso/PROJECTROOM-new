@@ -67,7 +67,7 @@ const swiper2 = new Swiper('.construction-slider', {
     // Optional parameters
     loop: false,
     spaceBetween: 30,
-    slidesPerView: 1,
+    slidesPerView: 'auto',
 
     breakpoints: {
         // when window width is >= 320px
@@ -88,7 +88,8 @@ const swiper3 = new Swiper('.pages-slider', {
     // Optional parameters
     loop: false,
     spaceBetween: 30,
-    slidesPerView: 1,
+    centeredSlides: true,
+    slidesPerView: 'auto',
 
     breakpoints: {
         // when window width is >= 320px
@@ -147,4 +148,47 @@ const swiper5 = new Swiper('.interesting__slider', {
         clickable: true,
     },
 
+});
+
+var interleaveOffset = 0.5;
+
+var mySwiper = new Swiper('.home-slider', {
+    spaceBetween: 0,
+    speed: 1500,
+    watchSlidesProgress: true,
+    pagination: {
+        el: '.swiper-pagination',
+        type: 'bullets',
+        clickable: true
+    },
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev"
+    },
+    on: {
+        progress: function () {
+            var swiper = this;
+            for (var i = 0; i < swiper.slides.length; i++) {
+                var slideProgress = swiper.slides[i].progress;
+                var innerOffset = swiper.width * interleaveOffset;
+                var innerTranslate = slideProgress * innerOffset;
+                swiper.slides[i].querySelector(".home-slider__slide-bg").style.transform =
+                    "translate3d(" + innerTranslate + "px, 0, 0)";
+            }
+        },
+        touchStart: function () {
+            var swiper = this;
+            for (var i = 0; i < swiper.slides.length; i++) {
+                swiper.slides[i].style.transition = "";
+            }
+        },
+        setTransition: function (speed) {
+            var swiper = this;
+            for (var i = 0; i < swiper.slides.length; i++) {
+                swiper.slides[i].style.transition = speed + "ms";
+                swiper.slides[i].querySelector(".home-slider__slide-bg").style.transition =
+                    speed + "ms";
+            }
+        }
+    }
 });
